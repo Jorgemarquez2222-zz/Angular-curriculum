@@ -1,0 +1,74 @@
+<nav  class="  blue darken-3 lighten-1 z-depth-3">
+  
+     <ul  id="slide-out" class="side-nav target_slow">
+          <li><div class="userView">
+            <div class="background">
+              <img src="assets/12.png" class="responsive-img">
+            </div>
+            <!--<a href="#!user"><img class="circle" src="{{ user.auth?.photoURL }}"></a>
+            <a href="#!name"><span class="white-text name">{{ (user.auth)?.displayName }}</span></a>
+            <a href="#!email"><span class="white-text email">{{ (user.auth)?.email }}</span></a>-->
+          </div></li>
+              <li><a target="_blank" href="https://ve.linkedin.com/in/jorge-marquez-garcía-6661a4b6"><i class="material-icons">grade</i>Mi linkedin</a></li>
+              <li><a target="_blank" href="https://github.com/Jorgemarquez2222"><i class="material-icons">work</i>Mi GtiHub</a></li>
+              <li><div class="divider"></div></li>
+              <!--<li><a class="subheader">Subheader</a></li>-->
+              <div class="trans ">
+              <li>
+                
+              <a class="waves-effect" routerLink="/inicio"  ><i class="material-icons">home</i>Inicio</a>
+              </li>
+              <li>
+              <a class="waves-effect" routerLink="/data-local" ><i class="material-icons">settings_input_hdmi</i>Data local</a>
+              </li>        
+              <!--<li>
+              <a class="waves-effect" routerLink="/firebase"><i class="material-icons">cloud_done</i> Firebase</a>
+              </li>        -->
+              <li>
+              <a class="waves-effect" routerLink="/scroll-infinito" ><i class="material-icons">play_for_work</i>Scroll infinito</a>
+              </li>        
+              <li>
+              <a class="waves-effect" routerLink="/pagination" ><i class="material-icons">repeat</i>Paginación</a>
+              </li>
+              <li>
+              <a class="waves-effect" routerLink="/tienda" (click)="qerror()" ><i class="material-icons">store</i>Tienda</a>
+              </li>
+                <!--<li>
+              <a class="waves-effect" (click)="login2()" ><i class="material-icons">lock</i>{{login}}</a>
+              </li>-->
+ 
+              </div>
+      </ul>
+ 
+      <a href="#" data-activates="slide-out" class="button-collapse3 "
+      onclick="Materialize.showStaggeredList('.target_slow')"
+     
+      ><i class="padizq material-icons alinear">menu</i></a>
+
+      <!--<li class="right alinear hide-on-med-and-down pad">
+        <a class="waves-effect alinear " (click)="login2()" ><i class="material-icons">lock</i>{{login}}</a>  
+      </li>-->
+      <li  class="right alinear hide-on-med-and-down pad" 
+          (mouseover)="mouseover()" 
+          (mouseleave)="mouseleave()">
+          <div routerLink="/detailsCart" style="cursor:pointer;"  class="alinear">
+          <i class="material-icons">shopping_cart</i>
+            <span>{{details.items}} </span>
+          </div>
+            <ul>
+              <li class="liCart" >
+              <cart *ngIf="ver"></cart>
+              </li>
+            </ul>
+      </li>
+
+      <!--<li class=" brand-logo center alinear">
+        <a routerLink="/inicio"> 
+        <h6 class=" alinear valign-wrapper right"> 
+          <img *ngIf="user.auth?.photoURL" class=" circle" width="50" height="50" src="{{ user.auth?.photoURL }}" > 
+          <span class="padizq"> {{ (user.auth)?.displayName }} </span>
+        </h6>
+        </a>
+      </li>-->
+      
+</nav>

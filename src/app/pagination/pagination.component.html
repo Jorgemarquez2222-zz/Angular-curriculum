@@ -1,0 +1,35 @@
+<br>
+<div class="container">
+    <div class="row">
+
+    <app-spinner></app-spinner>
+
+    <div *ngFor="let miembro of miembros | paginate: { itemsPerPage: 3, currentPage: p }">
+       <div class="row col s12 m4">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" [src]="miembro.thumbnailUrl">
+            </div>
+            <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">{{miembro.title  }}<i class="material-icons right">more_vert</i></span>
+            <p><a href="#">This is a link</a></p>
+                <div class="chip">
+                <img src="assets/yuna.jpg" alt="Contact Person">
+                Jane Doe
+            </div>
+            </div>
+            <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            
+            <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+        
+        </div>
+    </div>
+     </div>
+     </div>
+    <div class="pagination center">
+        <pagination-controls (pageChange)="p = $event" #api></pagination-controls>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <app-spinner></app-spinner>
+    <div *ngFor="let product of products">
+        <div class="row col s12 m3 " >
+            <div class="card-panel hoverable lighten-1 z-depth-1 ">
+              <div class="row center">
+                <a routerLink="/detailsProduct/{{product.id}}">                
+                  <img  src="assets/products/{{product.image}}.jpg" alt="" class="responsive-img ">
+                </a>                   
+                <div class="row center">
+                    <h5>{{product.nombre }}</h5>
+                    <span>{{product.price | currency : 'USD': true : '1.2-2'}}</span>
+                </div>
+                <a class="waves-effect waves-light btn"
+                (click)="addProduct(product)"
+                ><i class="material-icons right">shopping_cart</i>Agregar</a>
+            </div>
+        </div>
+      </div>
+  </div>
+  
+  

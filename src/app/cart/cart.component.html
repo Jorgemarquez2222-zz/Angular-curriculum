@@ -1,0 +1,16 @@
+<div  class=" black-text card-panel hoverable lighten-1 z-depth-3">   
+  <div class=" valign-wrapper flow-text" style="height: 40px" *ngFor="let key of keys()">
+    <img style="margin-right:10px" width="30" height="30" src="assets/products/{{products[key].image}}.jpg" >
+        <h6> {{products[key].nombre}}
+          {{products[key].price | currency :'USD' : true : '1.2-2'  }}
+          x
+          {{products[key].quantity}}
+          <span>
+            {{ (products[key].quantity * products[key].price) | currency :'USD' : true : '1.2-2' }}
+          </span>
+          </h6>
+        <i (click)="deleteToCart(products[key])" style="cursor:pointer" class="right tiny material-icons">delete</i>
+  </div>
+  <h6><span>hay {{details.items}} : articulos agregados</span></h6>
+  <h5>Total: {{details.total | currency :'USD' : true : '1.2-2'}} </h5>
+</div>

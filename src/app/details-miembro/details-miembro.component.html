@@ -1,0 +1,61 @@
+<br>
+<div class="container">
+  <div class="row">
+        <div class="row col s12 " >
+            <div class="card-panel {{miembro?.colorFondo}} hoverable white lighten-1 z-depth-5 ">
+              <div class="row ">
+                <div class="row center ">
+                  <img src="assets/{{miembro?.imgPerfil}}.png"  width="200" height="200" alt="" class="circle responsive-img">                  
+                </div>
+                  <div class="container">
+                    <div class="row">
+                        <div *ngIf="edit == !true" class="input-field col s12">
+                          <span class="black-text">
+                            <h5><p>Id: {{miembro?.$key}}</p></h5>
+                          </span>
+                          <span class="black-text">
+                            <h5><p>Title: {{miembro?.title}}</p></h5>
+                          </span>
+                          <span class="black-text">
+                            <h5><p>Body: {{miembro?.body}}</p></h5>
+                          </span>
+                          <span class="black-text">
+                            <h5><p>Background-color: {{miembro?.colorFondo}}</p></h5>
+                          </span>
+                          <span class="black-text">
+                            <h5><p>Name Img Perfil: {{miembro?.imgPerfil}}</p></h5>
+                          </span>
+                        </div>
+                        <div *ngIf="edit == true" class=" ">
+                          <label class="black-text" for="">Title:</label>                   
+                            <input [(ngModel)]="miembro.title" type="text" name="firstName">
+                        </div>
+                        <div *ngIf="edit == true" class=" ">                  
+                          <label class="black-text" for="">Body</label>
+                            <textarea [(ngModel)]="miembro.body" id="textarea1" class="materialize-textarea"></textarea>
+                          </div>
+                        <div *ngIf="edit == true" class=" ">
+                          <label class="black-text" for="">Color de fondo:</label>                   
+                            <input [(ngModel)]="miembro.colorFondo" type="text" name="firstName">
+                          </div>
+                        <div *ngIf="edit == true" class=" ">
+                          <label class="black-text" for="">Imagen de perfil</label>                   
+                            <input [(ngModel)]="miembro.imgPerfil" type="text" name="firstName">
+                      </div>
+                  </div> 
+                </div>
+            </div>
+              </div>
+            </div>
+        </div>
+  </div>
+
+  <div class="fixed-action-btn vertical">
+      <a class="btn-floating btn-large red"><i class="material-icons">settings</i></a>
+    <ul>
+      <li><a class="btn-floating btn-small waves-effect waves-light red right center" (click)="modMiembro(miembro,miembro?.$key)"><i class="material-icons">mode_edit</i></a></li>
+    </ul>
+</div>
+
+
+                         

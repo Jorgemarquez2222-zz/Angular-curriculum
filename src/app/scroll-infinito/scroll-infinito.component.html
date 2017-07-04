@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+  <h4 class="center">Scroll Infinito</h4>
+
+  
+
+    <div *ngFor="let miembro of miembros">
+          <div class="col s12 m4">
+            <h5 class="header">Horizontal Card</h5>
+            <div class="card horizontal">
+              <div class="card-image">
+                <img src="http://lorempixel.com/100/190/nature/">
+              </div>
+              <div class="card-stacked">
+                <div class="card-content">
+                  <p>{{miembro.id}}</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <app-spinner></app-spinner>
+  </div>
+  <div class="row col s12">
+    <div *ngIf="no_results center" >
+      <h5 class="cardd card-panel  center   lighten-1 z-depth-5">No se encontraron mas resultados</h5>
+    </div>
+  </div>
+
+</div>
+
+        <div class="search-results"
+            infinite-scroll
+            [infiniteScrollDistance]="2"
+            [infiniteScrollUpDistance]="1.5"
+            [infiniteScrollThrottle]="500"
+            (scrolled)="onScrollDown()"
+            (scrolledUp)="onScrollUp()">
+        </div>

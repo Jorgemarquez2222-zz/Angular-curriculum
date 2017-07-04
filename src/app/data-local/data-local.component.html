@@ -1,0 +1,53 @@
+<br>
+<div class="container">
+  <div class="row">
+<app-spinner></app-spinner>
+
+   <div *ngFor="let miembro of miembros">
+      <div class="row col s12 m6 l3">
+        <div class="card  hoverable lighten-1 z-depth-2">
+          <div style="padding: 5px;">   
+              <div class="chip">
+               <img  src="assets/{{miembro.imgPerfil}}.png" alt="Contact Person">
+               Jane Doe
+              </div>
+            </div>
+            <div  class="card-image waves-effect waves-block waves-light">
+            <img  class=" activator" src="assets/{{miembro.imgPerfil}}.png">
+            </div>
+            <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">{{miembro.title}}<i class="material-icons right">more_vert</i></span>
+            <p><a class="modal-trigger waves-effect waves-light " (click)="detalles(miembro)" href="#modal1">Detalles</a></p>
+
+            </div>
+          <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">{{miembro.title}}<i class="material-icons right">close</i></span>
+          <p>{{miembro.body}}.</p>
+          <a class="modal-trigger btn-floating btn waves-effect waves-light red" href="#modal1" (click)="detalles(miembro)" ><i class="material-icons">details</i></a>
+          </div>
+        </div>
+      </div>
+
+                
+  </div>
+  
+  <!-- Modal Structure -->
+    <div id="modal1" class="modal modal-fixed-footer">
+      <div class="modal-content center">
+        <h4>{{detallesMiembro?.title}}</h4>
+        <p>{{detallesMiembro?.body}}</p>
+        <img width="250" height="250'"  src="assets/{{detallesMiembro?.imgPerfil}}.png" alt="Contact Person">
+      </div>
+      <div class="modal-footer">
+        <div class="left" style="padding: 5px; ">   
+                <div class="chip">
+                <img  src="assets/{{detallesMiembro?.imgPerfil}}.png" alt="Contact Person">
+                Jane Doe
+                </div>
+              </div>
+        <a  class="modal-action modal-close waves-effect waves-green btn-flat ">Aceptar</a>
+      </div>
+    </div>
+
+</div>
+</div>

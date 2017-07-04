@@ -1,0 +1,58 @@
+<br>
+<div class="container">
+  <div class="row">
+    
+   <div *ngFor="let product of products">
+      <div class="col s12 m7">
+        
+        <div class="card  hoverable lighten-1 z-depth-2 horizontal">
+          <div class="card-image ">
+            <img src="assets/products/{{product.image}}.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <h5>{{product.nombre}}</h5>
+              <span >Precio: {{product.price | currency : 'USD': true : '1.2-2' }}</span> 
+              <!--<span class="right  ">Cantidad: {{product.quantity}}</span>-->
+                <span class="right" > Cantidad:   
+                <select  materialize="material_select">
+                    <option value="" disabled selected>{{product.quantity}}</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                </span>
+
+                  <!-- Dropdown Trigger -->
+                  <!--<a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>-->
+                  <!--<a class="dropdown-button btn" href="#!" data-activates="product.id">{{product.id}}<i class="material-icons right">arrow_drop_down</i></a>-->
+
+                <!-- Dropdown Structure -->
+                <!--<ul id="product.id" class="dropdown-content">
+                  <li><a href="#!">one</a></li>
+                  <li><a href="#!">two</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#!">three</a></li>
+                </ul>  -->
+
+
+
+
+            </div>
+            <div class="card-action">
+             <span class="right  ">Total: {{ (product.quantity * product.price) | currency :'USD' : true : '1.2-2' }}</span>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+
+
+  
+   </div>
+
+      
+  </div>
+</div>
+
+           

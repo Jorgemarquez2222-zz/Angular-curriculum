@@ -1,0 +1,22 @@
+.liCart{
+    position: absolute;
+    margin-left: -200px;
+    z-index: 99999;
+    margin-right: 7px;
+    float: right;
+    width: auto;
+    min-width: 250px;
+    margin-top: 58px;
+}
+.alinear{
+ display: inline-flex;
+}
+.trans>li{
+    opacity: 0;
+}
+.pad{
+    padding-right: 20px;
+}
+.padizq{
+    padding-left: 8px;
+}
