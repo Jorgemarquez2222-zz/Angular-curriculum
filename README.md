@@ -1,23 +1,24 @@
-Installation
+
+#Installation
 
 BEFORE YOU INSTALL: please read the prerequisites ( https://github.com/angular/angular-cli/blob/master/README.md#prerequisites )
 
-Install nodeJs
+#Install nodeJs
 
 https://nodejs.org/es/
 
-Install git
+#Install git
 
 https://git-scm.com/
 
-# npm install -g angular-cli
+#npm install -g @angular/cli
 
- git clone https://github.com/Jorgemarquez2222/angular2-with-materialize-and-firebase.git
+git clone https://github.com/Jorgemarquez2222/Angular-curriculum.git
 
- cd angular2-with-materialize-and-firebase
+cd Angular-curriculum
 
-# npm install
+npm install
 
-# ng serve
+ng serve
 
 open http://localhost:4200/ in your browser
