@@ -12,7 +12,7 @@ export class ObservablesTestComponent implements OnInit {
   data: Observable<any>
   
   constructor() {
-    this.data = Observable.create((observer) => {
+    this.data = new Observable((observer) => {
       observer.next(this.cursos);
     });   
   }
