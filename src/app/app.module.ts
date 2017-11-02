@@ -32,6 +32,7 @@ import { ProductsService } from './services/products.service';
 import { DetailsProductComponent } from './details-product/details-product.component';
 import { DetailsCartComponent } from './details-cart/details-cart.component';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { ObservablesTestComponent } from './observables-test/observables-test.component';
 
 
 const appRoutes: Routes = [
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
    { path: 'tienda', component: TiendaComponent },
   { path: 'detailsMiembro/:id', component: DetailsMiembroComponent },
   { path: 'detailsProduct/:id', component: DetailsProductComponent },
-  { path: 'detailsCart', component: DetailsCartComponent }
+  { path: 'detailsCart', component: DetailsCartComponent },
+  { path: 'observables', component: ObservablesTestComponent }
 ];
 
 // const myFirebaseAuthConfig = {
@@ -89,6 +91,7 @@ const appRoutes: Routes = [
     TiendaComponent,
     DetailsProductComponent,
     DetailsCartComponent,
+    ObservablesTestComponent,
 
 
     

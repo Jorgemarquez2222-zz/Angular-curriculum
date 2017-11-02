@@ -1,0 +1,8 @@
+<div> Data2: {{ data | async | json}}</div> 
+<button type="" (click)="cambiarData()" >Cambiar data</button>
+
+<ul>
+  <li *ngFor=" let curso of data | async " >
+    {{curso}}
+  </li>    
+</ul>
